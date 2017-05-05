@@ -1,6 +1,6 @@
 {
   "name": "es6-express-mongoose-starter",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Express & Mongoose starterkit written in ES6 for NodeJS.",
   "main": "server.js",
   "repository": {
