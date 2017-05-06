@@ -1,8 +1,8 @@
 {
   "name": "es6-express-mongoose-starter",
-  "version": "0.0.2",
-  "description": "Express & Mongoose starterkit written in ES6 for NodeJS.",
-  "main": "server.js",
+  "version": "0.0.3",
+  "description": "Express & Mongoose starter kit written in ES6 for NodeJS.",
+  "main": "src/server.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/patrickvaler/es6-express-mongoose-starter.git"
@@ -30,8 +30,8 @@
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "serve": "nodemon src/server.js --exec \"npm run linter -s && babel-node\"",
-    "build": "npm run linter -s && npm run test && babel src --out-dir build",
+    "serve": "NODE_ENV=dev nodemon src/server.js --exec \"npm run linter -s && babel-node\"",
+    "build": "NODE_ENV=prod npm run linter -s && npm run test && babel src --out-dir build",
     "linter": "./node_modules/.bin/eslint src",
     "test": "npm run linter -s && NODE_ENV=test mocha --timeout 30000 --compilers js:babel-register"
   }

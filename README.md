@@ -27,7 +27,7 @@ $ npm install
 ```
 
 ### Initialize MongoDB with data
-> The server tries to connect with `'mongodb://localhost:27017/es6-express-mongoose-starter'`, you can overwrite this with `MONGO_DB` constant in `src/config/config.js`.
+> The server tries to connect with `'mongodb://localhost:27017/es6-express-mongoose-starter'`, you can overwrite this default setting for each environment in `src/config/config.js`.
 
 Connect to your MongoDB instance and insert:
 ```bash
@@ -42,7 +42,7 @@ $ db.todos.insert([{ name: 'Book flight to Los Angeles' },
 ```bash
 $ npm run serve
 ```
-Runs the application with [nodemon]("https://nodemon.io/"). Server is listening on Port 3000 by default, this can be overwritten by `API_PORT` constant in `src/config/config.js`
+Runs the application with [nodemon]("https://nodemon.io/"). Server is listening on Port 3000 by default, you can overwrite this default setting for each environment in `src/config/config.js`
 
 Test if the backend is running by `curl` or a tool like [Postman]("https://www.getpostman.com/"):
 ```bash

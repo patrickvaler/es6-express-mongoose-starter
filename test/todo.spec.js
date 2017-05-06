@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import { Mockgoose } from 'mockgoose';
 import chaiHttp from 'chai-http';
 import server from '../src/server';
-import { MONGO_DB } from '../src/config/config';
+import config from '../src/config/config';
 
 const mockgoose = new Mockgoose(mongoose);
 
@@ -30,7 +30,7 @@ describe('Todos', () => {
         mockgoose.helper.reset();
         mockgoose.prepareStorage()
             .then(() => {
-                mongoose.connect(MONGO_DB, (err) => {
+                mongoose.connect(config.db, (err) => {
                     done(err);
                 })
             })

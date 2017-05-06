@@ -33,6 +33,7 @@ function update(id, name, completed) {
             deferred.resolve(todo);
         });
     } else {
+        // reject promise if name and completed information is missing
         deferred.reject({});
     }
 

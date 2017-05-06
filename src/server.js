@@ -1,43 +1,39 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
-import { API_PORT, MONGO_DB } from './config/config';
+import config from './config/config';
 import expressConfig from './config/express';
 import routesConfig from './config/routes';
 
 class Server {
     constructor() {
         this.app = express();
-        this.port = (process.env.NODE_ENV !== 'test') ? process.env.PORT || API_PORT : 3100;
+        this.config = config;
 
-        this.config();
-        this.routes();
-        this.server();
-        Server.mongoose();
+        this.init();
     }
 
-    config() {
+    init() {
+        // HTTP request logger
         this.app.use(morgan('dev'));
 
+        // express settings
         expressConfig(this.app);
-    }
 
-    routes() {
-        routesConfig(this.app);
-    }
-
-    server() {
-        this.app.listen(this.port, () => {
-            console.info(`[Server] listening on port ${this.port}`);
-        });
-    }
-
-    static mongoose() {
-        mongoose.connect(MONGO_DB, (err) => {
+        // connect to database
+        mongoose.connect(this.config.db, (err) => {
             if (err) {
-                console.error(`[MongoDB] Failed to connect. ${err}`);
+                console.log(`[MongoDB] Failed to connect. ${err}`);
             } else {
-                console.log(`[MongoDB] connected: ${MONGO_DB}`);
+                console.log(`[MongoDB] connected: ${this.config.db}`);
+
+                // initialize api
+                routesConfig(this.app);
+
+                // start server
+                this.app.listen(this.config.apiPort, () => {
+                    console.log(`[Server] listening on port ${this.config.apiPort}`);
+                });
             }
         });
     }
