@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/patrickvaler/es6-express-mongoose-starter.svg?branch=master)](https://travis-ci.org/patrickvaler/es6-express-mongoose-starter) [![Dependency Status](https://david-dm.org/patrickvaler/es6-express-mongoose-starter/status.svg?style=flat)](https://david-dm.org/patrickvaler/es6-express-mongoose-starter) [![GitHub version](https://badge.fury.io/gh/patrickvaler%2Fes6-express-mongoose-starter.svg)](https://badge.fury.io/gh/patrickvaler%2Fes6-express-mongoose-starter)
+[![Build Status](https://travis-ci.org/patrickvaler/es6-express-mongoose-starter.svg?branch=master)](https://travis-ci.org/patrickvaler/es6-express-mongoose-starter) [![Dependency Status](https://david-dm.org/patrickvaler/es6-express-mongoose-starter/status.svg?style=flat)](https://david-dm.org/patrickvaler/es6-express-mongoose-starter) [![GitHub version](https://badge.fury.io/gh/patrickvaler%2Fes6-express-mongoose-starter.svg)](https://badge.fury.io/gh/patrickvaler%2Fes6-express-mongoose-starter) [![Greenkeeper badge](https://badges.greenkeeper.io/patrickvaler/es6-express-mongoose-starter.svg)](https://greenkeeper.io/)
 
 
 # es6-express-mongoose-starter 
