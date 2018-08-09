@@ -9,6 +9,7 @@
   },
   "author": "Patrick Valer <hello@patrickvaler.ch>",
   "license": "MIT",
+  "private": true,
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
