@@ -1,6 +1,6 @@
 {
   "name": "es6-express-mongoose-starter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Express & Mongoose starter kit written in ES6 for NodeJS.",
   "main": "src/server.js",
   "repository": {
@@ -32,8 +32,9 @@
   },
   "scripts": {
     "serve": "NODE_ENV=dev nodemon src/server.js --exec \"npm run lint -s && babel-node\"",
-    "build": "NODE_ENV=prod npm run lint -s && npm run test && babel src --out-dir build",
+    "build": "babel src --out-dir build",
     "lint": "./node_modules/.bin/eslint src",
-    "test": "NODE_ENV=test mocha --timeout 30000 --compilers js:babel-register"
+    "test": "NODE_ENV=test mocha --exit --timeout 30000 --compilers js:babel-register",
+    "test:watch": "NODE_ENV=test mocha --timeout 30000 --compilers js:babel-register"
   }
 }

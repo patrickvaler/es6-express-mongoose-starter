@@ -15,7 +15,7 @@ function getAll(req, res) {
 
 function update(req, res) {
   const { id } = req.params;
-  const { name, completed } = req.body.name;
+  const { name, completed } = req.body;
 
   TodoDa.update(id, name, completed)
     .then(() => res.sendStatus(200))
