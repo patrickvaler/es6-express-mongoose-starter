@@ -10,29 +10,29 @@
   "author": "Patrick Valer <hello@patrickvaler.ch>",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "mongoose": "^4.10.2",
-    "morgan": "^1.8.1",
-    "q": "^1.5.0"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.7",
+    "morgan": "^1.9.0",
+    "q": "^1.5.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.2.3",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.6",
     "babel-preset-node6": "^11.0.0",
-    "chai": "^3.5.0",
-    "chai-http": "^3.0.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.2.0",
-    "mocha": "^3.4.1",
-    "mockgoose": "^7.3.1",
-    "nodemon": "^1.11.0"
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "mocha": "^5.2.0",
+    "mockgoose": "^7.3.5",
+    "nodemon": "^1.18.3"
   },
   "scripts": {
-    "serve": "NODE_ENV=dev nodemon src/server.js --exec \"npm run linter -s && babel-node\"",
-    "build": "NODE_ENV=prod npm run linter -s && npm run test && babel src --out-dir build",
-    "linter": "./node_modules/.bin/eslint src",
-    "test": "npm run linter -s && NODE_ENV=test mocha --timeout 30000 --compilers js:babel-register"
+    "serve": "NODE_ENV=dev nodemon src/server.js --exec \"npm run lint -s && babel-node\"",
+    "build": "NODE_ENV=prod npm run lint -s && npm run test && babel src --out-dir build",
+    "lint": "./node_modules/.bin/eslint src",
+    "test": "NODE_ENV=test mocha --timeout 30000 --compilers js:babel-register"
   }
 }
